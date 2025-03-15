@@ -1,0 +1,12 @@
+import React from 'react';
+
+const GradientComponent = () => {
+  return (
+    <div className="min-h-screen ">
+      {/* Your content goes here */}
+      <h1 className="text-white text-4xl font-bold p-8">Features Background</h1>
+    </div>
+  );
+};
+
+export default GradientComponent;
