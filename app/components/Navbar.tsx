@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gradient-to-b from-[#061212] to-[#0E2E2E] w-full z-50 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0">
             <Link href={'/'}>   <Image src="/logo.png" width={150} height={150} alt="Logo" /></Link>
@@ -26,7 +26,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
             {["Home", "Pricing", "About", "Community"].map((item) => (
-              <a key={item} href="#" className="hover:shadow-[0_0_20px_5px_rgba(68,229,231,0.8)] transition-all duration-300 ">
+              <a key={item} href="#" className="transition-all duration-300 hover:shadow-[0_0_20px_5px_rgba(68,229,231,0.8)] hover:text-cyan-300 ">
                 {item}
               </a>
             ))}
@@ -58,7 +58,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <Dialog open={isMobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="relative z-50">
-          <div className="fixed inset-0 min-h-screen bg-gradient-to-t from-[#061212] to-[#0E2E2E] bg-opacity-30" />
+          <div className="fixed inset-0 min-h-screen  backdrop-blur-[20px] bg-opacity-30" />
           <div className="fixed inset-y-0 right-0 w-64 bg-[#074e4e] shadow-lg p-4 text-white">
             <button onClick={() => setMobileMenuOpen(false)} className="text-white">
               <AiOutlineClose size={24} />
